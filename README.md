@@ -23,11 +23,20 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    - hashing functions take an arbitrary input and turn it into a fixed size output that can be decoded to find the original input
+
 2. Collision resolution
+    - collision resolution is having an option for your hash table that allows more than one input to sit in the same index location. I've done this before using a linked list for each location so that each spot can have its own index.
+
 3. Performance of basic hash table operations
+    - hash tables can be used in operations such as a lookup table to reduce runtimes to o(1) for searching or indexing, which can be extremely valuable in expensive operations.
+
 4. Load factor
+    - load factor is the total items / capacity of the hash table. When the load factor is getting high (assuming there is collision resolution implemented) the speed of hash tables begins to reduce because of too many things per index. This can be resolved with automatic resizing.
 5. Automatic resizing
+    - automatic resizing is related to load factor. when the load factor gets over an arbitrary threshold like 0.7, you can have the hash table double in size and rehash everything to new indexes to get the inputs more spread out for quick runtimes. Furthermore, you can make a lower threshold like 0.2, to half the size of the hash table automatically so you can save more space.
 6. Various use cases for hash tables
+    - hash tables are great with expensive mathematical operations by creating lookup tables(storing the answers and searching before doing math again). Also, things like caching anthing, but for example a websites info. It can timestamp as an index , and store as an item all the website info like html etc, so it can just preload from that next time you go to the site(and auto update any new info of course).
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
